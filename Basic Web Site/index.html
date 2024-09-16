@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Video Page</title>
+
+  <!-- Link to external CSS -->
+  <style>
+    /* Basic CSS customization */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #4CAF50;
+      font-size: 3em;
+      margin-top: 50px;
+    }
+
+    /* Video container styling */
+    .video-container {
+      margin: 20px auto;
+      width: 560px;
+      height: 315px;
+      border: 3px solid #4CAF50;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Button styling */
+    #animateButton {
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* Animation CSS */
+    @keyframes moveButton {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(20px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>My Favorite Music Video</h1>
+
+  <!-- Embedded YouTube video -->
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2S3Bwvt5Pug" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- Button to trigger animation -->
+  <button id="animateButton">Click Me!</button>
+
+  <!-- Script for JavaScript animation -->
+  <script>
+    document.getElementById("animateButton").addEventListener("click", function() {
+      this.style.animation = "moveButton 1s ease infinite";
+    });
+  </script>
+
+</body>
+</html>
